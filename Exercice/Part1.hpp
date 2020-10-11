@@ -1,32 +1,38 @@
 //
-//  Part1.hpp
+//  Exercice2.hpp
 //  Exercice
 //
 //  Created by Nicolas BAUER on 06/10/2020.
 //
 
-#ifndef Part1_hpp
-#define Part1_hpp
+#ifndef Exercice2_hpp
+#define Exercice2_hpp
 
-#include <stdio.h>
+#include <iostream>
 
-class Point {
-//    Private
-//member_coord
-    float m_X;
-    float m_Y;
+class PointAxe {
+//    Abscisse, ordonnée
+    float r;
+    float t;
+    static int cpt;
     
 public:
-//    Constructor
-    Point(float m_nX, float m_nY);
+    static int compteur();
     
-//    Method member
-    void deplace(float m_nX, float m_nY);
-    void affiche(Point p);
-
-    float getX();
-    float getY();
+//    Constructeur
+    PointAxe(float p_A, float p_O);
     
+//    Destructeur
+    ~PointAxe();
+//    Methodes
+    float afficheA();
+    float afficheO();
+    void deplace(float, float);
+    
+    void homotethie(float hm);
+    void rotation(float th);
+    float rho();
+    float theta();
 };
 
-#endif /* Part1_hpp */
+#endif /* Exercice2_hpp */
